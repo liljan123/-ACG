@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll with Sticky Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    #zib {
+      position: sticky;
+      top: 0;
+      width: 85%;
+      margin: 10px;
+      height: 200px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      transition: top 0.3s ease-in-out; /* 添加过渡效果 */
+    }
+
+    #zib-2 {
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    .zib-3 {
+      padding: 20px 10px 20px 0;
+      border-left: 1px #f5f6f7 solid;
+      position: relative;
+    }
+
+    .zib-3 li {
+      height: 33px;
+      margin-left: 10px;
+      position: relative;
+      transition: .3s;
+      border-radius: 5px;
+    }
+
+    .zib-3 li a {
+      color: #4e5358;
+      padding-left: 40px !important;
+      padding: 10px;
+      line-height: 33px;
+      font-size: 12px;
+      transition: .3s;
+    }
+
+    .zib-3 li:hover {
+      background-color: #f5f6f7;
+    }
+
+    .zib-3 li:hover.n a {
+      color: #eb71aa;
+    }
+
+    .zib-3 li:hover::before {
+      opacity: 1;
+    }
+
+    .active::before {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="zib">
+  <div id="zib-2">
+    <ul class="zib-3">
+      <li class="n active"><a href="#wznav_0">游戏截图</a></li>
+      <li class="n"><a href="#wznav_1">游戏介绍</a></li>
+      <li class="n"><a href="#wznav_2">备注</a></li>
+      <li class="n"><a href="#wznav_3">下载链接</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 添加一些占位元素以便滚动 -->
+<div style="height: 1000px;"></div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const zib = document.querySelector('#zib');
+    const scrollPosition = window.scrollY;
+
+    // 根据滚动位置决定导航栏是否粘性滚动
+    if (scrollPosition === 0) {
+      zib.style.top = '0';
+    } else {
+      zib.style.top = `${scrollPosition}px`;
+    }
+  });
+</script>
+
+</body>
+</html>

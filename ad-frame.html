@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #slider {
+      margin: 0 auto;
+      width: 1000px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      transition: left 0.5s ease-in-out;
+      position: absolute;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .slide {
+      flex: 0 0 100px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+<div id="slider">
+  <div class="slides">
+    <div class="slide"><img src="images/ad1.webp" alt="Image 1"></div>
+    <div class="slide"><img src="images/ad2.webp" alt="Image 2"></div>
+    <div class="slide"><img src="images/ad3.webp" alt="Image 3"></div>
+  
+    <!-- Add more slides as needed -->
+  </div>
+</div>
+
+
+<button onclick="nextSlide()">Next</button>
+<button onclick="previousSlide()">Previous</button>
+
+<script>
+  var index=0;
+  function animate(obj, target) {
+  clearInterval(obj.timer); // 清除之前可能存在的定时器
+    obj.timer = setInterval(function() {
+        var step = (target - obj.offsetLeft) / 10; // 计算每一步移动的距离
+
+        if (obj.offsetLeft == target) {
+            clearInterval(obj.timer); // 到达目标位置时清除定时器
+        }
+
+        obj.style.left = obj.offsetLeft + step + 'px'; // 更新元素的 left 属性，实现移动
+    }, 30); // 定时器每隔30毫秒执行一次
+}
+  
+
+    function previousSlide() {
+      index--;
+      if (index == -4) {
+            document.getElementById('slider').style.left=0;
+            index=0;
+      }
+      var myElement = document.getElementById('slider');
+      animate(myElement, index*100); 
+    }
+    function nextSlide() {
+        index++;
+        if(index==3){
+          document.getElementById('slider').style.left=0;
+          index=0;
+        }
+        var myElement = document.getElementById('slider'); // 获取要移动的元素
+        animate(myElement, index*100); 
+    }
+</script>
+</body>
+</html>

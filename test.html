@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="test.css">
+    <script>
+        var i=0;
+        function myDate(){
+            var now=new Date();
+            var year=now.getFullYear();
+            var month=now.getMonth()+1;
+            var day=now.getDate();
+            var hours=now.getHours();
+            var minutes=now.getMinutes();
+            var seconds=now.getSeconds();
+     
+            document.getElementById("date-time").innerHTML=year+"年"+month+"月"+day+"日"+hours+"："+minutes+"："+seconds;
+        }
+        setInterval(myDate,1000);
+    </script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="#."><img src="images/logo.png" alt="acg"></a>
+        </div>
+        <nav>
+            <div class="nav">
+                <ul>
+                    <li><a href="#.">首页</a></li>
+                    <li><a href="#.">电脑游戏</a></li>
+                    <li><a href="#.">手机游戏</a></li>
+                    <li><a href="#.">图库</a></li>
+                    <li><a href="#.">帮助</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="search">
+            <form action="ddbook.html" method="get">
+                <input type="search" placeholder="站内搜索">
+                <button type="submit" >搜索</button>
+            </form>
+        </div>
+        <div id="login">
+            <a href="#." class="login">登录</a> | <a href="#." class="login">注册</a>
+        </div>
+        <div id="date-time"></div>
+    </header>
+    <div id="content">
+        <div id="content-top">
+              
+        </div>
+       <div id="text-ad">
+            <div class="ad1">下载资源不要使用双线程哦~</div>
+            <div class="ad2">本网站由LilJiang独立开发</div>
+            <div class="ad3">网站参考量子ACG网站</div>
+        </div>   
+        <div id="content_ad"></div>
+        <main>
+            <!--广告-->
+            <div id="banner">
+                <!-- <a href="" class = 'left jiantou'>&lt;</a>
+                <a href="" class = 'right jiantou'>&gt;</a> -->
+                <ul class="list">
+                    <li class="item active"><a href="#."><img src="images/ad1.webp" id="ad" alt="广告" /></a></li>
+                    <li class="item"><a href="#."><img src="images/ad2.webp" id="ad" alt="广告" /></a></li>
+                    <li class="item"><a href="#."><img src="images/ad3.webp" id="ad" alt="广告" /></a></li>
+                </ul>
+                <button class="btn" id="leftBtn"></button> 
+                <button class="btn" id="rightBtn"></button>
+                <ul id="page">
+                    <li class="point active" data-index=0><a href="#." id="a1"></a></li>
+                    <li class="point" data-index=1><a href="#." id="a2"></a></li>
+                    <li class="point" data-index=2><a href="#." id="a3"></a></li>
+                </ul>
+            </div>
+            
+            <!--主要内容-->
+            <div id="main_content">
+                <section id="computer_game">
+                    <div class="title">
+                        <h3><span class="icon-book"></span>【电脑游戏】</h3>
+                        <a href="#.">查看更多<div class="title-cover"></div>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-item">
+                            <a href=""><img src="images/computer_1.webp" alt=""></a>
+                            <span class="name"><a href="">【Gal】【PC】保健室的老师与恶魔般的会长</a></span>
+                            <div class="classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="info">
+                                <span class="date">12天前</span>
+                                <span class="information">
+                                    <span class="comment">12</span>
+                                    <span class="read">5500</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="images/comput_2.webp" alt=""></a>
+                            <span class="name"><a href="">【Gal】【PC】保健室老师与哥特萝莉校医</a></span>
+                            <div class="classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="info">
+                                <span class="date">13天前</span>
+                                <span class="information">
+                                    <span class="comment">7</span>
+                                    <span class="read">4404</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="images/computer_3.webp" alt=""></a>
+                            <span class="name"><a href="">【Gal】【PC】景之海的艾佩莉亚</a></span>
+                            <div class="classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="info">
+                                <span class="date">14天前</span>
+                                <span class="information">
+                                    <span class="comment">8</span>
+                                    <span class="read">5120</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="images/computer_4.webp" alt=""></a>
+                            <span class="name"><a href="">【Gal】【PC】背阴的日葵</a></span>
+                            <div class="classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="info">
+                                <span class="date">15天前</span>
+                                <span class="information">
+                                    <span class="comment">11</span>
+                                    <span class="read">3140</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="images/computer_5.jpg" alt=""></a>
+                            <span class="name"><a href="">【Gal】【PC】黑兽2‧改</a></span>
+                            <div class="classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="info">
+                                <span class="date">15天前</span>
+                                <span class="information">
+                                    <span class="comment">11</span>
+                                    <span class="read">7201</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="images/computer_6.webp" alt=""></a>
+                            <span class="name"><a href="">【Gal】【PC】果然在游戏里我的青春恋爱物语也有问题</a></span>
+                            <div class="classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="info">
+                                <span class="date">17天前</span>
+                                <span class="information">
+                                    <span class="comment">15</span>
+                                    <span class="read">12204</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="mobile_game">
+                    <div class="title">
+                        <h3><span class="icon-book"></span>【手机游戏】</h3>
+                        <a href="#.">查看更多<div class="title-cover"></div></a>
+                    </div>
+                    <div class="content">
+                        <div class="content-item">
+                            <a href=""><img src="i" alt=""></a>
+                            <a href=""><h2></h2></a>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><h2></h2></a>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><h2></h2></a>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><h2></h2></a>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><h2></h2></a>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><h2></h2></a>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="beauty_image">
+                    <div class="title">
+                        <h3><span class="icon-book"></span>【美图】</h3>
+                        <a href="#.">查看更多<div class="title-cover"></div>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <h2 ></h2>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <h2 ></h2>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <h2 ></h2>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <h2 ></h2>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <h2 ></h2>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                        <div class="content-item">
+                            <a href=""><img src="" alt=""></a>
+                            <h2 ></h2>
+                            <div class="classify"></div>
+                            <div class="info"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <aside>
+            <div id="user">
+                <div id="img">
+                    <div id="bgimg">
+                        <a href=""><img src="images/user_bgimg.webp" alt="头像背景"></a>
+                    </div>
+                    <div id="user_img">
+                        <a href=""><img src="images/user_img.webp" alt="头像"></a>
+                    </div>
+                </div>
+                <div id="hello">HI！请登录</div>
+                <div ><a href="#." class="login1">登录</a> | <a href="#." class="login2">注册</a></div>
+                <div id="shejiao">————社交帐号登录————</div>
+                <div id="login_choice">
+                    <li class="github"><img src="images/github.jpg" alt="github"></li>
+                    <li class="qq"><img src="images/qq.jpg" alt="qq"></li>
+                    <li class="wechat"><img src="images/wechat.jpg" alt="wechat"></li>
+                </div>
+            </div>
+            <section id="hot">
+                <div class="title">
+                    <h4>最近热门</h4>
+                </div>
+                <ul id="hot_content">
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="images/computer_1.webp" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <span class="name"><a href="">【Gal】【PC】保健室的老师与恶魔般的会长</a></span>
+                            </div>
+                            <div class="aside_classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="aside_info">
+                                <span class="date">12天前</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="images/computer_5.jpg" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <span><a href="">【Gal】【PC】黑兽2‧改</a></span>
+                            </div>
+                            <div class="aside_classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="aside_info">
+                                <span class="date">15天前</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <a href=""><h2>1</h2></a>
+                            </div>
+                            <div class="aside_classify"></div>
+                            <div class="aside_info"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="images/computer_1.webp" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <span class="name"><a href="">【Gal】【PC】保健室的老师与恶魔般的会长</a></span>
+                            </div>
+                            <div class="aside_classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="aside_info">
+                                <span class="date">12天前</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="images/computer_1.webp" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <span class="name"><a href="">【Gal】【PC】保健室的老师与恶魔般的会长</a></span>
+                            </div>
+                            <div class="aside_classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="aside_info">
+                                <span class="date">12天前</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="new">
+                <div class="title">
+                    <h4>最新更新</h4>
+                </div>
+                <ul id="new_content">
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <a href=""><h2>1</h2></a>
+                            </div>
+                            <div class="aside_classify"></div>
+                            <div class="aside_info"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <a href=""><h2>1</h2></a>
+                            </div>
+                            <div class="aside_classify"></div>
+                            <div class="aside_info"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <a href=""><h2>1</h2></a>
+                            </div>
+                            <div class="aside_classify"></div>
+                            <div class="aside_info"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="images/computer_1.webp" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <span class="name"><a href="">【Gal】【PC】保健室的老师与恶魔般的会长</a></span>
+                            </div>
+                            <div class="aside_classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="aside_info">
+                                <span class="date">12天前</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aside_content">
+                            <div class="aside_img">
+                                <a href=""><img src="images/computer_1.webp" alt=""></a>
+                            </div>
+                            <div class="aside_name">
+                                <span class="name"><a href="">【Gal】【PC】保健室的老师与恶魔般的会长</a></span>
+                            </div>
+                            <div class="aside_classify">
+                                <a href="">电脑</a>
+                            </div>
+                            <div class="aside_info">
+                                <span class="date">12天前</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        
+    </footer>
+    <script>
+        document.getElementById("a1").style.width = "20px";
+        var items = document.querySelectorAll(".item"); //图片节点
+        var points = document.querySelectorAll(".point") //点
+        var left = document.getElementById("leftBtn");
+        var right = document.getElementById("rightBtn");
+        var all = document.querySelector("#banner")
+        var index = 0;
+        var time = 0; //定时器跳转参数初始化
+
+        // 新增函数，用于更新"page"指示器的状态
+        var updatePage = function () {
+            for (var j = 0; j < points.length; j++) {
+                points[j].className = j === index ? 'point active' : 'point';
+            }
+        }
+
+        //封装一个清除active方法
+        var clearActive = function () {
+            for (var i = 0; i < items.length; i++) {
+                items[i].className = 'item';
+            }
+        }
+
+        //改变active方法
+        var goIndex = function () {
+            clearActive();
+            items[index].className = 'item active';
+            changeshape(index+1);
+            updatePage(); // 调用更新"page"指示器的函数
+        }
+
+        //左按钮事件
+        var goLeft = function () {
+            if (index === 0) {
+                index = 2;
+            } else {
+                index--;
+            }
+            goIndex();
+        }
+
+        //右按钮事件
+        var goRight = function () {
+            if (index < 2) {
+                index++;
+            } else {
+                index = 0;
+            }
+            goIndex();
+        }
+
+        //绑定点击事件监听
+        left.addEventListener('click', function () {
+            goLeft();
+            time = 0; //计时器跳转清零
+        })
+
+        right.addEventListener('click', function () {
+            goRight();
+            time = 0; //计时器跳转清零
+        })
+
+        for (var i = 0; i < points.length; i++) {
+            // 修改点击事件监听，调用goIndex函数
+            points[i].addEventListener('click', function () {
+                var pointIndex = this.getAttribute('data-index');
+                index = pointIndex;
+                goIndex();
+                changeshape(parseInt(index)+1);
+                time = 0; //计时器跳转清零
+            })
+        }
+
+        //计时器轮播效果
+        var timer;
+
+        function play() {
+            timer = setInterval(() => {
+                time++;
+                if (time == 50) {
+                    goRight();
+                    time = 0;
+                }
+            }, 100)
+        }
+        play();
+
+        //移入清除计时器
+        all.onmousemove = function () {
+            clearInterval(timer)
+        }
+
+        //移出启动计时器
+        all.onmouseleave = function () {
+            play();
+        }
+        function changeshape(num) {
+            // document.getElementById("ad").src = `images/ad${num}.webp`;
+            for (let targetNum = 1; targetNum <= 3; targetNum++) {
+                let aTarget = `a${targetNum}`;
+                if (targetNum == num) {
+                    document.getElementById(aTarget).style.animation = "pageshape2 1s linear";
+                    document.getElementById(aTarget).style.width = "20px";
+                }
+                else {
+                    document.getElementById(aTarget).style.animation = "pageshape1 1s linear";
+                    document.getElementById(aTarget).style.width = "8px";
+                }
+            }
+            count=num;
+        }
+    </script>
+    <!-- <script>
+        var count = 2;
+        var a = [...document.querySelectorAll('#page a')];
+        document.getElementById("a1").style.width = "20px";
+        
+        for (let i = 0; i < a.length; i++) {
+            a[i].addEventListener('click', function () {
+                changeshape(i);
+            }, false);
+            if(a[i].className = "point active"){
+                changeshape(i);
+            }
+        }
+    
+        function changeshape(num) {
+            document.getElementById("ad").src = `images/ad${num}.webp`;
+            for (let targetNum = 1; targetNum <= 3; targetNum++) {
+                let aTarget = `a${targetNum}`;
+                if (targetNum == num) {
+                    document.getElementById(aTarget).style.animation = "pageshape2 1s linear";
+                    document.getElementById(aTarget).style.width = "20px";
+                }
+                else {
+                    document.getElementById(aTarget).style.animation = "pageshape1 1s linear";
+                    document.getElementById(aTarget).style.width = "8px";
+                }
+            }
+            count=num;
+        }
+
+    </script> -->
+</body>
+</html>
